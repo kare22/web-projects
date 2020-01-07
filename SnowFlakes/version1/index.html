@@ -1,0 +1,255 @@
+<html>
+
+
+<head>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<style>
+    /* customizable snowflake styling */
+    .snowflake {
+        color: #fff;
+        font-size: 1em;
+        font-family: Arial, sans-serif;
+        text-shadow: 0 0 5px #000;
+    }
+
+    @-webkit-keyframes snowflakes-fall {
+        0% {
+            top: -10%
+        }
+        100% {
+            top: 100%
+        }
+    }
+
+    @-webkit-keyframes snowflakes-shake {
+        0%, 100% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0)
+        }
+        50% {
+            -webkit-transform: translateX(80px);
+            transform: translateX(80px)
+        }
+    }
+
+    @keyframes snowflakes-fall {
+        0% {
+            top: -10%
+        }
+        100% {
+            top: 100px
+        }
+    }
+
+    @keyframes snowflakes-shake {
+        0%, 100% {
+            transform: translateX(0)
+        }
+        50% {
+            transform: translateX(80px)
+        }
+    }
+
+    .snowflake {
+        position: fixed;
+        top: -10%;
+        z-index: 9999;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        cursor: default;
+        -webkit-animation-name: snowflakes-fall, snowflakes-shake;
+        -webkit-animation-duration: 10s, 3s;
+        -webkit-animation-timing-function: linear, ease-in-out;
+        -webkit-animation-iteration-count: infinite, infinite;
+        -webkit-animation-play-state: running, running;
+        animation-name: snowflakes-fall, snowflakes-shake;
+        animation-duration: 10s, 3s;
+        animation-timing-function: linear, ease-in-out;
+        animation-iteration-count: infinite, infinite;
+        animation-play-state: running, running
+    }
+
+    .snowflake:nth-of-type(0) {
+        left: 1%;
+        -webkit-animation-delay: 0s, 0s;
+        animation-delay: 0s, 0s
+    }
+
+    .snowflake:nth-of-type(1) {
+        left: 10%;
+        -webkit-animation-delay: 1s, 1s;
+        animation-delay: 1s, 1s
+    }
+
+    .snowflake:nth-of-type(2) {
+        left: 20%;
+        -webkit-animation-delay: 6s, .5s;
+        animation-delay: 6s, .5s
+    }
+
+    .snowflake:nth-of-type(3) {
+        left: 30%;
+        -webkit-animation-delay: 4s, 2s;
+        animation-delay: 4s, 2s
+    }
+
+    .snowflake:nth-of-type(4) {
+        left: 40%;
+        -webkit-animation-delay: 2s, 2s;
+        animation-delay: 2s, 2s
+    }
+
+    .snowflake:nth-of-type(5) {
+        left: 50%;
+        -webkit-animation-delay: 8s, 3s;
+        animation-delay: 8s, 3s
+    }
+
+    .snowflake:nth-of-type(6) {
+        left: 60%;
+        -webkit-animation-delay: 6s, 2s;
+        animation-delay: 6s, 2s
+    }
+
+    .snowflake:nth-of-type(7) {
+        left: 70%;
+        -webkit-animation-delay: 2.5s, 1s;
+        animation-delay: 2.5s, 1s
+    }
+
+    .snowflake:nth-of-type(8) {
+        left: 80%;
+        -webkit-animation-delay: 1s, 0s;
+        animation-delay: 1s, 0s
+    }
+
+    .snowflake:nth-of-type(9) {
+        left: 90%;
+        -webkit-animation-delay: 3s, 1.5s;
+        animation-delay: 3s, 1.5s
+    }
+
+    .snowflake:nth-of-type(10) {
+        left: 25%;
+        -webkit-animation-delay: 2s, 0s;
+        animation-delay: 2s, 0s
+    }
+
+    .snowflake:nth-of-type(11) {
+        left: 40%;
+        -webkit-animation-delay: 2s, 5s;
+        animation-delay: 3s, 2s
+    }
+
+    .snowflake:nth-of-type(12) {
+        left: 80%;
+        -webkit-animation-delay: 1s, 2.5s;
+        animation-delay: 4s, 1s
+    }
+
+    .snowflake:nth-of-type(13) {
+        left: 25%;
+        -webkit-animation-delay: 3s, 2s;
+        animation-delay: 1s, 2s
+    }
+
+    .snowflake:nth-of-type(14) {
+        left: 30%;
+        -webkit-animation-delay: 0s, 0s;
+        animation-delay: 0s, 1s
+    }
+
+    .snowflake:nth-of-type(15) {
+        left: 55%;
+        -webkit-animation-delay: 0s, 0s;
+        animation-delay: 0s, 1s
+    }
+
+    .snowflake:nth-of-type(16) {
+        left: 70%;
+        -webkit-animation-delay: 0s, 0s;
+        animation-delay: 1s, 0s
+    }
+
+    .snowflake:nth-of-type(17) {
+        left: 50%;
+        -webkit-animation-delay: 0s, 0s;
+        animation-delay: 0.5s, 0s
+    }
+
+    .snowflake:nth-of-type(13) {
+        left: 5%;
+        -webkit-animation-delay: 3s, 2.5s;
+        animation-delay: 1.5s, 1s
+    }
+</style>
+
+
+<div id="snow" class="snowflakes" aria-hidden="true" style="position: relative;">
+    <img src="ülikool.jpg" alt="kool" height="100%" width="100%">
+    <div id="helbekesed"></div>
+</div>
+
+<div>
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut dapibus libero. Morbi aliquam rutrum purus ut posuere. Cras diam lectus, finibus in lobortis nec, venenatis id mauris. Vivamus et suscipit metus, sit amet bibendum purus. Sed ipsum neque, ornare at mollis vitae, porttitor quis massa. Proin lacinia eget odio vitae blandit. Proin vitae consectetur est, eu interdum magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam condimentum ac enim quis finibus. Phasellus ullamcorper odio at tincidunt ultrices. Pellentesque dignissim in risus vitae dictum. Aenean pulvinar laoreet libero ac finibus.
+
+    Pellentesque euismod purus sit amet semper dignissim. Nam ut nunc vel nulla efficitur ullamcorper sed non urna. Duis in dolor sit amet dolor ullamcorper ornare. In hac habitasse platea dictumst. In sed varius orci, quis gravida felis. Integer porttitor non ipsum sit amet lobortis. Nam mauris nulla, sagittis id venenatis quis, bibendum in lectus. Duis varius bibendum tortor sit amet venenatis. In hac habitasse platea dictumst. Praesent feugiat enim non dapibus ultrices. Maecenas facilisis nulla enim, vitae hendrerit augue mollis at. Sed faucibus arcu justo, et cursus justo pharetra eget. Sed sed ligula sed felis efficitur vulputate interdum commodo lectus. Integer blandit justo eu urna euismod convallis. Cras justo elit, posuere ac sollicitudin quis, viverra at urna.
+
+    Proin mattis quis est id congue. Pellentesque vel hendrerit tortor. Suspendisse sapien lorem, pharetra sed bibendum id, interdum sed justo. Fusce aliquam velit porttitor orci cursus, sollicitudin semper eros dapibus. Sed lobortis ut purus non porta. Suspendisse urna nisi, pretium viverra congue vulputate, commodo et neque. Curabitur imperdiet semper nisl quis consequat. Cras ultricies et magna nec tincidunt. Etiam ultricies laoreet justo, in rutrum sem egestas non. Duis aliquam leo nibh, non faucibus ipsum euismod a. Ut porttitor diam ac urna elementum posuere. Suspendisse vehicula mi elit, nec tincidunt dolor fermentum non. Ut tincidunt lacus vel tincidunt faucibus. Pellentesque at ultrices lorem. Vivamus sed elit in dui luctus commodo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+
+    Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas tincidunt, massa id mollis sollicitudin, erat neque maximus ante, a eleifend nulla elit nec dolor. Etiam hendrerit metus vel arcu fermentum, sit amet rhoncus mauris lacinia. Etiam a lorem id tellus elementum sodales ut eu quam. Praesent pellentesque et erat ut finibus. Nullam et laoreet justo. Pellentesque nec urna felis. Praesent vitae elit commodo, placerat ligula non, scelerisque erat. Etiam facilisis, erat in viverra tempus, ipsum justo aliquet tellus, a blandit lacus enim a quam. Morbi fermentum dapibus suscipit.
+
+    Morbi ornare, purus et ultricies mollis, mauris dolor faucibus orci, id tristique lacus velit at metus. Cras et tortor enim. Nullam scelerisque euismod pretium. Integer vulputate faucibus urna, sit amet cursus lacus euismod dapibus. Mauris blandit ultricies velit sit amet euismod. Mauris efficitur a sem eget eleifend. Curabitur vehicula venenatis lorem, tempor sodales arcu bibendum vitae. Morbi mattis erat non justo faucibus dapibus. Pellentesque ac vestibulum nunc, interdum placerat libero. Fusce placerat semper dui ut vehicula. Proin convallis ut eros ac accumsan.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut dapibus libero. Morbi aliquam rutrum purus ut posuere. Cras diam lectus, finibus in lobortis nec, venenatis id mauris. Vivamus et suscipit metus, sit amet bibendum purus. Sed ipsum neque, ornare at mollis vitae, porttitor quis massa. Proin lacinia eget odio vitae blandit. Proin vitae consectetur est, eu interdum magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam condimentum ac enim quis finibus. Phasellus ullamcorper odio at tincidunt ultrices. Pellentesque dignissim in risus vitae dictum. Aenean pulvinar laoreet libero ac finibus.
+
+    Pellentesque euismod purus sit amet semper dignissim. Nam ut nunc vel nulla efficitur ullamcorper sed non urna. Duis in dolor sit amet dolor ullamcorper ornare. In hac habitasse platea dictumst. In sed varius orci, quis gravida felis. Integer porttitor non ipsum sit amet lobortis. Nam mauris nulla, sagittis id venenatis quis, bibendum in lectus. Duis varius bibendum tortor sit amet venenatis. In hac habitasse platea dictumst. Praesent feugiat enim non dapibus ultrices. Maecenas facilisis nulla enim, vitae hendrerit augue mollis at. Sed faucibus arcu justo, et cursus justo pharetra eget. Sed sed ligula sed felis efficitur vulputate interdum commodo lectus. Integer blandit justo eu urna euismod convallis. Cras justo elit, posuere ac sollicitudin quis, viverra at urna.
+
+    Proin mattis quis est id congue. Pellentesque vel hendrerit tortor. Suspendisse sapien lorem, pharetra sed bibendum id, interdum sed justo. Fusce aliquam velit porttitor orci cursus, sollicitudin semper eros dapibus. Sed lobortis ut purus non porta. Suspendisse urna nisi, pretium viverra congue vulputate, commodo et neque. Curabitur imperdiet semper nisl quis consequat. Cras ultricies et magna nec tincidunt. Etiam ultricies laoreet justo, in rutrum sem egestas non. Duis aliquam leo nibh, non faucibus ipsum euismod a. Ut porttitor diam ac urna elementum posuere. Suspendisse vehicula mi elit, nec tincidunt dolor fermentum non. Ut tincidunt lacus vel tincidunt faucibus. Pellentesque at ultrices lorem. Vivamus sed elit in dui luctus commodo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+
+    Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas tincidunt, massa id mollis sollicitudin, erat neque maximus ante, a eleifend nulla elit nec dolor. Etiam hendrerit metus vel arcu fermentum, sit amet rhoncus mauris lacinia. Etiam a lorem id tellus elementum sodales ut eu quam. Praesent pellentesque et erat ut finibus. Nullam et laoreet justo. Pellentesque nec urna felis. Praesent vitae elit commodo, placerat ligula non, scelerisque erat. Etiam facilisis, erat in viverra tempus, ipsum justo aliquet tellus, a blandit lacus enim a quam. Morbi fermentum dapibus suscipit.
+
+    Morbi ornare, purus et ultricies mollis, mauris dolor faucibus orci, id tristique lacus velit at metus. Cras et tortor enim. Nullam scelerisque euismod pretium. Integer vulputate faucibus urna, sit amet cursus lacus euismod dapibus. Mauris blandit ultricies velit sit amet euismod. Mauris efficitur a sem eget eleifend. Curabitur vehicula venenatis lorem, tempor sodales arcu bibendum vitae. Morbi mattis erat non justo faucibus dapibus. Pellentesque ac vestibulum nunc, interdum placerat libero. Fusce placerat semper dui ut vehicula. Proin convallis ut eros ac accumsan.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut dapibus libero. Morbi aliquam rutrum purus ut posuere. Cras diam lectus, finibus in lobortis nec, venenatis id mauris. Vivamus et suscipit metus, sit amet bibendum purus. Sed ipsum neque, ornare at mollis vitae, porttitor quis massa. Proin lacinia eget odio vitae blandit. Proin vitae consectetur est, eu interdum magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam condimentum ac enim quis finibus. Phasellus ullamcorper odio at tincidunt ultrices. Pellentesque dignissim in risus vitae dictum. Aenean pulvinar laoreet libero ac finibus.
+
+    Pellentesque euismod purus sit amet semper dignissim. Nam ut nunc vel nulla efficitur ullamcorper sed non urna. Duis in dolor sit amet dolor ullamcorper ornare. In hac habitasse platea dictumst. In sed varius orci, quis gravida felis. Integer porttitor non ipsum sit amet lobortis. Nam mauris nulla, sagittis id venenatis quis, bibendum in lectus. Duis varius bibendum tortor sit amet venenatis. In hac habitasse platea dictumst. Praesent feugiat enim non dapibus ultrices. Maecenas facilisis nulla enim, vitae hendrerit augue mollis at. Sed faucibus arcu justo, et cursus justo pharetra eget. Sed sed ligula sed felis efficitur vulputate interdum commodo lectus. Integer blandit justo eu urna euismod convallis. Cras justo elit, posuere ac sollicitudin quis, viverra at urna.
+
+    Proin mattis quis est id congue. Pellentesque vel hendrerit tortor. Suspendisse sapien lorem, pharetra sed bibendum id, interdum sed justo. Fusce aliquam velit porttitor orci cursus, sollicitudin semper eros dapibus. Sed lobortis ut purus non porta. Suspendisse urna nisi, pretium viverra congue vulputate, commodo et neque. Curabitur imperdiet semper nisl quis consequat. Cras ultricies et magna nec tincidunt. Etiam ultricies laoreet justo, in rutrum sem egestas non. Duis aliquam leo nibh, non faucibus ipsum euismod a. Ut porttitor diam ac urna elementum posuere. Suspendisse vehicula mi elit, nec tincidunt dolor fermentum non. Ut tincidunt lacus vel tincidunt faucibus. Pellentesque at ultrices lorem. Vivamus sed elit in dui luctus commodo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+
+    Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas tincidunt, massa id mollis sollicitudin, erat neque maximus ante, a eleifend nulla elit nec dolor. Etiam hendrerit metus vel arcu fermentum, sit amet rhoncus mauris lacinia. Etiam a lorem id tellus elementum sodales ut eu quam. Praesent pellentesque et erat ut finibus. Nullam et laoreet justo. Pellentesque nec urna felis. Praesent vitae elit commodo, placerat ligula non, scelerisque erat. Etiam facilisis, erat in viverra tempus, ipsum justo aliquet tellus, a blandit lacus enim a quam. Morbi fermentum dapibus suscipit.
+
+    Morbi ornare, purus et ultricies mollis, mauris dolor faucibus orci, id tristique lacus velit at metus. Cras et tortor enim. Nullam scelerisque euismod pretium. Integer vulputate faucibus urna, sit amet cursus lacus euismod dapibus. Mauris blandit ultricies velit sit amet euismod. Mauris efficitur a sem eget eleifend. Curabitur vehicula venenatis lorem, tempor sodales arcu bibendum vitae. Morbi mattis erat non justo faucibus dapibus. Pellentesque ac vestibulum nunc, interdum placerat libero. Fusce placerat semper dui ut vehicula. Proin convallis ut eros ac accumsan.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut dapibus libero. Morbi aliquam rutrum purus ut posuere. Cras diam lectus, finibus in lobortis nec, venenatis id mauris. Vivamus et suscipit metus, sit amet bibendum purus. Sed ipsum neque, ornare at mollis vitae, porttitor quis massa. Proin lacinia eget odio vitae blandit. Proin vitae consectetur est, eu interdum magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam condimentum ac enim quis finibus. Phasellus ullamcorper odio at tincidunt ultrices. Pellentesque dignissim in risus vitae dictum. Aenean pulvinar laoreet libero ac finibus.
+
+    Pellentesque euismod purus sit amet semper dignissim. Nam ut nunc vel nulla efficitur ullamcorper sed non urna. Duis in dolor sit amet dolor ullamcorper ornare. In hac habitasse platea dictumst. In sed varius orci, quis gravida felis. Integer porttitor non ipsum sit amet lobortis. Nam mauris nulla, sagittis id venenatis quis, bibendum in lectus. Duis varius bibendum tortor sit amet venenatis. In hac habitasse platea dictumst. Praesent feugiat enim non dapibus ultrices. Maecenas facilisis nulla enim, vitae hendrerit augue mollis at. Sed faucibus arcu justo, et cursus justo pharetra eget. Sed sed ligula sed felis efficitur vulputate interdum commodo lectus. Integer blandit justo eu urna euismod convallis. Cras justo elit, posuere ac sollicitudin quis, viverra at urna.
+
+    Proin mattis quis est id congue. Pellentesque vel hendrerit tortor. Suspendisse sapien lorem, pharetra sed bibendum id, interdum sed justo. Fusce aliquam velit porttitor orci cursus, sollicitudin semper eros dapibus. Sed lobortis ut purus non porta. Suspendisse urna nisi, pretium viverra congue vulputate, commodo et neque. Curabitur imperdiet semper nisl quis consequat. Cras ultricies et magna nec tincidunt. Etiam ultricies laoreet justo, in rutrum sem egestas non. Duis aliquam leo nibh, non faucibus ipsum euismod a. Ut porttitor diam ac urna elementum posuere. Suspendisse vehicula mi elit, nec tincidunt dolor fermentum non. Ut tincidunt lacus vel tincidunt faucibus. Pellentesque at ultrices lorem. Vivamus sed elit in dui luctus commodo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+
+    Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas tincidunt, massa id mollis sollicitudin, erat neque maximus ante, a eleifend nulla elit nec dolor. Etiam hendrerit metus vel arcu fermentum, sit amet rhoncus mauris lacinia. Etiam a lorem id tellus elementum sodales ut eu quam. Praesent pellentesque et erat ut finibus. Nullam et laoreet justo. Pellentesque nec urna felis. Praesent vitae elit commodo, placerat ligula non, scelerisque erat. Etiam facilisis, erat in viverra tempus, ipsum justo aliquet tellus, a blandit lacus enim a quam. Morbi fermentum dapibus suscipit.
+
+    Morbi ornare, purus et ultricies mollis, mauris dolor faucibus orci, id tristique lacus velit at metus. Cras et tortor enim. Nullam scelerisque euismod pretium. Integer vulputate faucibus urna, sit amet cursus lacus euismod dapibus. Mauris blandit ultricies velit sit amet euismod. Mauris efficitur a sem eget eleifend. Curabitur vehicula venenatis lorem, tempor sodales arcu bibendum vitae. Morbi mattis erat non justo faucibus dapibus. Pellentesque ac vestibulum nunc, interdum placerat libero. Fusce placerat semper dui ut vehicula. Proin convallis ut eros ac accumsan.
+</div>
+
+<script>
+    var helbed = "";
+    for (let i = 0; i < 17; i++) {
+        helbed = helbed + '<div class="snowflake" style="position: absolute;">❅</div>'
+    }
+    document.getElementById("helbekesed").innerHTML = helbed
+
+</script>
+
+
+</body>
+
+</html>
